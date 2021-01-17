@@ -11,3 +11,7 @@ def solution(prices):
                 break
         answer.append(count)
     return answer
+
+prices = [1,2,3,2,3]
+result = solution(prices)
+print(result)
