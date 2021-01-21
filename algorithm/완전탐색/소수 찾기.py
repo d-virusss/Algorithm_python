@@ -42,3 +42,9 @@ print(solution(numbers))
 # 한 번이라도 나온 수들만 check_prime에 넣어서
 # 같은 수는 한 번만 check_prime으로 확인하여 answer를
 # 증가시키도록 보장하여 해결
+
+
+
+# 소수 판별하는 함수의 경우에는 한 번 봐두면 좋을 듯
+
+# 사용한 방법 : Permutation, 소수 판별 사용
