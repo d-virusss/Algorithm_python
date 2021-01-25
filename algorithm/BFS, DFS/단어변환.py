@@ -33,3 +33,6 @@ begin = "hit"
 target = "cog"
 words = ["hot", "dot", "dog", "lot", "log", "cog"]
 print(solution(begin, target, words))
+
+# 백트래킹 이용하여 해결
+# 바킹독 재귀, 백트래킹 참고한 시간 포함 2시간
