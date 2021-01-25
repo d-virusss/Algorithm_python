@@ -1,4 +1,6 @@
 from collections import deque
+
+
 def solution(n, computers):
     answer = 0
     checked = [0] * n
@@ -6,7 +8,7 @@ def solution(n, computers):
     for i in range(n):
         if checked[i] == 0:
             q.append(i)
-            while(q):
+            while (q):
                 node = q.popleft()
                 checked[node] = 1
                 for j in range(n):
@@ -14,6 +16,7 @@ def solution(n, computers):
                         q.append(j)
             answer += 1
     return answer
+
 
 n = 4
 computers = [
