@@ -3,7 +3,7 @@
 import sys
 from collections import deque
 row, col = map(int, sys.stdin.readline().split())
-field = [list(sys.stdin.readline()) for _ in range(row)]
+field = [list(sys.stdin.readline().strip()) for _ in range(row)]
 jihoon = [['#']*col for _ in range(row)]
 fire = [['#']*col for _ in range(row)]
 q = deque([])
