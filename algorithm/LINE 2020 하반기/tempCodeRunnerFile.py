@@ -1,0 +1,3 @@
+
+	ball = deque(ball)
+	result = []
