@@ -33,9 +33,8 @@ def solution(ball, order):
 
 	return result
 
-
 ball = [11, 2, 9, 13, 24]
 order = [9, 2, 13, 24, 11]
 print(solution(ball, order))
 
-# 15:55분 ~
+# 15:55분 ~ 16:55분
