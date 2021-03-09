@@ -1,14 +1,23 @@
 import sys
 from collections import deque
-# field = [list(sys.stdin.readline()) for _ in range(3)]
-# print(field)
-abc()
-def abc():
-  print("abc called")
-q = deque([1, 2, 3, 4, 5, 6])
-i = 0
-while i < len(q):
-  if q[i] == 3:
-    q.popleft()
-    i = 0
-  i += 1
+dir = [[0], [0, 1, 2, 3], [0, 1], [0, 1, 2, 3], [0, 1, 2, 3], [0]]
+cctv_count = 5
+cctv = [3,2,5,5,1]
+arr = [-1] * cctv_count
+visited = [False] * cctv_count
+count = 0
+def dfs(depth):
+    global arr, visited, count
+    if depth == cctv_count:
+        print(arr)
+        count += 1
+        return
+    for i in range(len( dir[cctv[depth]] )):
+        arr[depth] = (dir[cctv[depth]][i])
+        visited[depth] = True
+        dfs(depth+1)
+        visited[depth] = False
+
+dfs(0)
+
+print(count)
