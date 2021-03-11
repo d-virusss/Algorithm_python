@@ -1,0 +1,1 @@
+sticker_row - ori_row - 1

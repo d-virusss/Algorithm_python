@@ -1,23 +1,24 @@
 import sys
 from collections import deque
-dir = [[0], [0, 1, 2, 3], [0, 1], [0, 1, 2, 3], [0, 1, 2, 3], [0]]
-cctv_count = 5
-cctv = [3,2,5,5,1]
-arr = [-1] * cctv_count
-visited = [False] * cctv_count
-count = 0
-def dfs(depth):
-    global arr, visited, count
-    if depth == cctv_count:
-        print(arr)
-        count += 1
-        return
-    for i in range(len( dir[cctv[depth]] )):
-        arr[depth] = (dir[cctv[depth]][i])
-        visited[depth] = True
-        dfs(depth+1)
-        visited[depth] = False
 
-dfs(0)
+stickers = [
+    [
+        [1,1,1,1,1],
+        [0,1,1,1,0],
+        [1,1,0,1,1],
+    ]
+]
 
-print(count)
+def change_dir(sticker_index):
+    global stickers
+    sticker_row = len(stickers[sticker_index])
+    sticker_col = len(stickers[sticker_index][0])
+    tmp = [ [0] * sticker_row for _ in range(sticker_col)]
+    for ori_row in range(sticker_row):
+        for ori_col in range(sticker_col):
+            tmp[ori_col][(sticker_row - ori_row - 1)] = stickers[sticker_index][ori_row][ori_col]
+
+    stickers[sticker_index] = tmp
+
+change_dir(0)
+print(stickers[0])
