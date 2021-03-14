@@ -1,1 +1,1 @@
-
+int(sys.stdin.readline().split())
