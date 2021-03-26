@@ -28,5 +28,11 @@ a = [
   [56, 8, 3, 2],
   [1, 2, 5, 5, 6]
 ]
+tmp = []
+for i in range(1, 4):
+  for j in range(i+1, 4):
+    tmp.append((i,j))
 
-print(stickers[0])
+print(tmp)
+
+# print(stickers[0])
